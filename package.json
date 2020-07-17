@@ -1,0 +1,35 @@
+{
+  "name": "unister",
+  "version": "0.0.1",
+  "description": "The telegram bot assistant of The BSBA™ team.",
+  "main": "main.js",
+  "scripts": {
+    "start": "node main",
+    "development": "nodemon main",
+    "test": "node test.js"
+  },
+  "keywords": [
+    "Telegram",
+    "Bot",
+    "BSBA",
+    "Unister",
+    "Helper",
+    "Assistant"
+  ],
+  "author": "Genemator Sakhib <genemators@gmail.com>",
+  "license": "GPL-3.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bsba-team/unister.git"
+  },
+  "bugs": {
+    "url": "https://github.com/bsba-team/unister/issues"
+  },
+  "homepage": "https://github.com/bsba-team/unister#readme",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "colors": "^1.4.0",
+    "nodemon": "^2.0.4",
+    "telegraf": "^3.38.0"
+  }
+}
