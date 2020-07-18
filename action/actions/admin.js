@@ -1,6 +1,6 @@
 const { composer, middleware } = require('../../core/bot')
 const { Markup, Extra } = require('telegraf')
-const fs = require('fs')
+
 const consoles = require('../../layouts/consoles')
 const message = require('../../layouts/messages')
 const keyboard = require('../../layouts/keyboards')
@@ -12,14 +12,12 @@ composer.action(`admins`, async ctx => {
         const list = []
         for (let admin of admins) {
             list.push([Markup.callbackButton(admin, `admin_${admin}`)])
-        }
-        return Markup.inlineKeyboard(list)
+        } return Markup.inlineKeyboard(list)
     }
     const picture = "https://github.com/bsba-team/unister/raw/master/assets/guard.png"
 
     await ctx.editMessageMedia({
-        type: 'photo',
-        media: picture,
+        type: 'photo', media: picture,
         caption: message.admin[0]
     }, {
         parse_mode: "HTML",
@@ -38,9 +36,8 @@ composer.action(/admin_(.+)/ig, async ctx => {
         `<b>Surname:</b> <code>${found["surname"]}</code>` + `\n` +
         `<b>Experiences:</b> <code>${found["experience"].toString()}</code>`
     await ctx.editMessageMedia({
-        type: 'photo',
-        media: found['avatar'],
-        caption: result
+        type: 'photo', caption: result,
+        media: found['avatar']
     }, {
         parse_mode: "HTML",
         disable_web_page_preview: true,

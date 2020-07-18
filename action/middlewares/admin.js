@@ -12,8 +12,7 @@ composer.command(`admins`, async ctx => {
         const list = []
         for (let admin of admins) {
             list.push([Markup.callbackButton(admin, `admin_${admin}`)])
-        }
-        return Markup.inlineKeyboard(list)
+        } return Markup.inlineKeyboard(list)
     }
     const photo = "https://github.com/bsba-team/unister/raw/master/assets/guard.png"
     await ctx.replyWithPhoto(photo, {
