@@ -6,20 +6,6 @@ jobs:
     name: Build
     runs-on: ubuntu-latest
     steps:
-      - name: send default message
-        uses: appleboy/telegram-action@master
-        with:
-          to: ${{ secrets.TELEGRAM_TO }}
-          token: ${{ secrets.TELEGRAM_TOKEN }}
-
-      - name: send custom message
-        uses: appleboy/telegram-action@master
-        with:
-          to: ${{ secrets.TELEGRAM_TO }}
-          token: ${{ secrets.TELEGRAM_TOKEN }}
-          message: |
-            The ${{ github.event_name }} event triggered final step.
-            echo This event is a pull request that had an assignee removed.
       - name: try multiple message
         uses: appleboy/telegram-action@master
         with:
@@ -28,4 +14,4 @@ jobs:
           format: html
           message: |
             ⚡️ <a href="https://github.com/aszenz/repo/commit/${{ github.event.push.after }}">Commits</a> pushed to master by <em>${{ github.event.push.pusher.name }}</em> ⚡️
-            ${{ github.actor }}:${{ github.event.head_commit.message }}
+            ${{ github.actor }} : ${{ github.event.head_commit.message }}
