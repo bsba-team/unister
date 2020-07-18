@@ -7,8 +7,10 @@ const keyboard = require('../../layouts/keyboards')
 const ds = require('../../database/ds')
 
 composer.command(`minecraft`, async ctx => {
+    await ctx.replyWithHTML("<b>Please, wait a minute. We are processing your request!</b>")
+
     const database = await ds(minecraft)
-    if (database["debug"].ping === false) {
+    if (database === null || database["debug"].ping === false) {
             await ctx.replyWithHTML(`<b>Unavailable at the moment! Please, try again later...</b>`, {
                 reply_markup: keyboard.minecraft
             })

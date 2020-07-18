@@ -6,6 +6,7 @@ module.exports = (link) => {
         return response.data
     })
         .catch(errors => {
+        // console.log(errors.response.status)
         return null
     })
 }
