@@ -1,10 +1,11 @@
 {
-  "count": 5,
-  "admins": {
-    "genemator": {
-      "name": "Sokhibjon",
-      "surname": "Orzikulov",
-      "profile": "https://bsba.uz/genemator"
-    }
+  "Genemator": {
+    "name": "Sokhibjon",
+    "surname": "Orzikulov",
+    "profile": "https://bsba.uz/genemator",
+    "telegram": "genemator",
+    "github": "genemators",
+    "experience": ["Javascript", "Typescript"],
+    "avatar": "https://github.com/genemators/bsba/raw/master/themes/obsidian/source/img/genemator/avatar.jpg"
   }
 }

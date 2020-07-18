@@ -1,5 +1,3 @@
-
-
 exports.start =
     `<b>Welcome to BSBA™: Unister Assistant!</b>` + `\n` +
     `\n` +
@@ -30,3 +28,7 @@ exports.minecraft = (data) =>
     `<b>Players: (${data["players"].online}/${data["players"].max})</b>` + `\n` +
     `<b>Version: ${data.version}</b>` + `\n` +
     `<b>Software:</b> ${data["software"]}` + `\n`
+
+exports.admin = [
+    `<b>Choose an admin from the list to get information about:</b>`
+]

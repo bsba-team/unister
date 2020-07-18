@@ -20,3 +20,5 @@ exports.minecraft = Markup.inlineKeyboard([
         Markup.urlButton("🌐 Website", "https://bsba.aternos.me/")
     ]
 ])
+
+exports.adminBack = Markup.inlineKeyboard([Markup.callbackButton(`🔙 Back`, `admins`)])
