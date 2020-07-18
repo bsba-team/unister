@@ -1,5 +1,12 @@
 {
   "users": [
-    "genemator"
+    {
+      "name": "genemator",
+      "link": "genemator"
+    },
+    {
+      "name": "saeween",
+      "": ""
+    }
   ]
 }
