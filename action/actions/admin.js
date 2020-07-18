@@ -34,6 +34,8 @@ composer.action(/admin_(.+)/ig, async ctx => {
         `<a href="${found["avatar"]}"></a><a href="${found["profile"]}"><b>${match}</b></a>` + `\n` +
         `<b>Name:</b> <code>${found["name"]}</code>` + `\n` +
         `<b>Surname:</b> <code>${found["surname"]}</code>` + `\n` +
+        `<b>Status:</b> <code>${found["status"]}</code>` + `\n` +
+        `<b>Rank:</b> <code>${found["rank"]}</code>` + `\n` +
         `<b>Experiences:</b> <code>${found["experience"].toString()}</code>`
     await ctx.editMessageMedia({
         type: 'photo', caption: result,
