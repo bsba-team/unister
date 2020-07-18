@@ -37,8 +37,8 @@ jobs:
           to: ${{ secrets.TELEGRAM_TO }}
           token: ${{ secrets.TELEGRAM_TOKEN }}
           message: send photo message
-          photo: './tests/github.png'
-          document: './tests/gophercolor.png'
+          photo: './assets/logo.png'
+          document: './assets/logo.png'
 
       - name: send location message
         uses: appleboy/telegram-action@master
@@ -61,7 +61,7 @@ jobs:
         with:
           to: ${{ secrets.TELEGRAM_TO }}
           token: ${{ secrets.TELEGRAM_TOKEN }}
-          message_file: tests/message.txt
+          message_file: assets/message.txt
 
       # - name: send message using socks5 proxy URL
       #   uses: appleboy/telegram-action@master
