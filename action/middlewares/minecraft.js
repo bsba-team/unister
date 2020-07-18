@@ -8,7 +8,7 @@ const ds = require('../../database/ds')
 
 composer.command(`minecraft`, async ctx => {
     const database = await ds(minecraft)
-    if (database.debug.ping === false) {
+    if (database["debug"].ping === false) {
             await ctx.replyWithHTML(`<b>Unavailable at the moment! Please, try again later...</b>`, {
                 reply_markup: keyboard.minecraft
             })
