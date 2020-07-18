@@ -15,7 +15,7 @@ composer.command(`admins`, async ctx => {
         }
         return Markup.inlineKeyboard(list)
     }
-    const photo = "https://github.com/genemators/bsba/raw/master/assets/logo.png"
+    const photo = "https://github.com/bsba-team/unister/raw/master/assets/guard.png"
     await ctx.replyWithPhoto(photo, {
         parse_mode: "HTML",
         caption: message.admin[0],
