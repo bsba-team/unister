@@ -11,7 +11,7 @@ composer.action(`minecraft`, async ctx => {
     let uptime = await now.toLocaleString();
     const database = await ds(minecraft)
 
-    if (database.debug.ping === false) {
+    if (database["debug"].ping === false) {
         await ctx.editMessageText(`<b>Unavailable at the moment! Please, try again later...</b>` + `\n<b>Last Update:</b> ${uptime}`, {
             parse_mode: "HTML",
             reply_markup: keyboard.minecraft
