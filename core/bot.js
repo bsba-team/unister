@@ -1,7 +1,7 @@
 const { Telegraf, Composer } = require('telegraf')
 
 const consoles = require('../layouts/consoles')
-const { token, environment } = require('./config')
+const { token, environment, domain, port } = require('./config')
 
 const bot = new Telegraf(token)
 const composer = new Composer()
@@ -12,9 +12,9 @@ const middleware = (composer) => {
 if (environment === "heroku") {
     bot.launch({
         webhook: {
-            domain: process.env.URL,
+            domain: domain,
             hookPath: '/bot',
-            port: process.env.PORT
+            port: port
         }
     })
         .then(() => consoles.launch(environment))

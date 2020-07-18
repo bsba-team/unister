@@ -15,5 +15,8 @@ exports.help = Markup.inlineKeyboard([
 exports.minecraft = Markup.inlineKeyboard([
     [
         Markup.callbackButton("🔃 Refresh", "minecraft")
+    ],
+    [
+        Markup.urlButton("🌐 Website", "https://bsba.aternos.me/")
     ]
 ])

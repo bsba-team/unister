@@ -1,1 +1,2 @@
 require('./help')
+require('./minecraft')

@@ -21,4 +21,11 @@ exports.help =
     `by typing: @bsba_bot and then start typing something there.</i>`
 
 exports.minecraft = (data) =>
-    data.toString()
+    `<b>The status of our minecraft server:</b>` + `\n` +
+    `\n` +
+    `<b>Address:</b> mc.bsba.uz / ${data.ip}:${data.port}` + `\n` +
+    `<b>Online:</b> ${data.online}` + `\n` +
+    `<b>Message:</b> ${data.motd.clean}` + `\n` +
+    `<b>Players: (${data.players.online}/${data.players.max})</b>` + `\n` +
+    `<b>Version: ${data.version}</b>` + `\n` +
+    `<b>Software:</b> ${data.software}` + `\n`

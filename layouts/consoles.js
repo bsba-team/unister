@@ -1,5 +1,5 @@
 const colors = require('colors');
-const project = "D:\\Projects\\unister\\action\\"
+const path = require('path');
 
 exports.errors = (error) => {
     console.log(
@@ -18,5 +18,6 @@ exports.wrongEnv = () => {
 }
 
 exports.module = (filename) => {
-    console.log("The module ".yellow.bold + filename.replace(project, '').yellow + " has been loaded...".yellow.bold)
+    const modules = path.dirname(filename).split(path.sep).pop() + "/" + path.basename(filename, '.js')
+    console.log("The module ".yellow.bold + modules.yellow+ " has been loaded...".yellow.bold)
 }
