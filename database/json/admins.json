@@ -7,5 +7,32 @@
     "github": "genemators",
     "experience": ["Javascript", "Typescript"],
     "avatar": "https://github.com/genemators/bsba/raw/master/themes/obsidian/source/img/genemator/avatar.jpg"
+  },
+  "Nagai Matsuge": {
+    "name": "Bobur",
+    "surname": "Komiljonov",
+    "profile": "https://bsba.uz/nagaimatsuge/",
+    "telegram": "Komiljonov_B",
+    "github": "NagaiMatsuge",
+    "experience": ["Html5", "Css3"],
+    "avatar": "https://github.com/genemators/bsba/raw/master/themes/obsidian/source/img/nagaimatsuge/avatar.jpg"
+  },
+  "Itsuki Jayden": {
+    "name": "Abdullo",
+    "surname": "Khodjakbarov",
+    "profile": "https://bsba.uz/itsukijayden/",
+    "telegram": "Sky_Coffees",
+    "github": "Jayden-Izanagi",
+    "experience": ["C++", "C#"],
+    "avatar": "https://github.com/genemators/bsba/raw/master/themes/obsidian/source/img/itsukijayden/avatar.jpg"
+  },
+  "MrAbdurakhimov": {
+    "name": "Mukhammadyusuf",
+    "surname": "Abdurakhimov",
+    "profile": "https://bsba.uz/mrabdurakhimov/",
+    "telegram": "iblogs_uz",
+    "github": "MrAbdurakhimov",
+    "experience": ["PHP", "JavaScript"],
+    "avatar": "https://github.com/genemators/bsba/raw/master/themes/obsidian/source/img/mrabdurakhimov/avatar.jpg"
   }
 }
