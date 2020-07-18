@@ -15,7 +15,7 @@ composer.action(`admins`, async ctx => {
         }
         return Markup.inlineKeyboard(list)
     }
-    const picture = "https://github.com/bsba-team/unister/raw/master/assets/admins.png"
+    const picture = "https://github.com/bsba-team/unister/raw/master/assets/admin.png"
 
     await ctx.editMessageMedia({
         type: 'photo',
