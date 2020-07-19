@@ -14,7 +14,7 @@ jobs:
           photo: assets/github.jpg
           format: html
           message: |
-            ⚡️ <a href="https://github.com/${{ github.actor }}/${{ github.repo }}/commit/${{ commit.sha }}"><b>Commits</b></a> pushed to master by <em>${{ github.event.push.pusher.name }}</em> ⚡️
+            ⚡️ <a href="https://github.com/${{ github.actor }}/${{ github.repo }}/commit/${{ github.commit.sha }}"><b>Commits</b></a> pushed to master by <em>${{ github.event.push.pusher.name }}</em> ⚡️
             <b>Event:</b> <code>${{ github.event.name }}</code>
             <b>Author:</b> <code>${{ github.event.push.pusher.name }}</code>
             <b>Summary:</b> <code>${{ github.event.head_commit.message }}</code>
