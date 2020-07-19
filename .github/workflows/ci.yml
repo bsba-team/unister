@@ -21,4 +21,4 @@ jobs:
             <b>Summary:</b> <code>${{ github.event.head_commit.message }}</code>
             <b>Description:</b> <code>${{ github.event.head_commit.desc }}</code>
 
-            <a href="https://github.com/${{ github.repository }}/commit/${{ commit.sha }}">Commit</a> | <a href="https://github.com/${{ github.repository }}">Repo</a> | <a href="https://bsba.uz">Home</a>
+            <a href="https://github.com/${{ github.repository }}/commit/${{ github.sha }}">Commit</a> | <a href="https://github.com/${{ github.repository }}">Repo</a> | <a href="https://bsba.uz">Home</a>
