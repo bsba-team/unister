@@ -14,8 +14,9 @@ jobs:
           format: html
           message: |
             <b>New GitHub Notification</b>
-            <b>Repo</b>: <a href="${{ env.GITHUB_REPOSITORY }}">${{ env.GITHUB_REPOSITORY }}</a>
+            <b>Repo</b>: <a href="${{ github.repository }}">${{ github.repository }}</a>
             <b>Event:</b> <code>${{ github.event_name }}</code>
             <b>Author:</b> <code>${{ github.actor }}</code>
             <b>Summary:</b> <code>${{ github.event.head_commit.message }}</code>
             <b>Description:</b> <code>${{ github.event.head_commit.desc }}</code>
+            ${{github}}
