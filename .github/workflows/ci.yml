@@ -13,7 +13,7 @@ jobs:
           token: ${{ secrets.TELEGRAM_TOKEN }}
           format: html
           message: |
-            <b><a href="https://github.com/${{ github.repository }}">New GitHub Notification</a></b>
+            <b><a href="https://github.com/${{ github.repository }}">GITHUB UPDATE NOTIFICATION</a></b>
 
             <b>Repo</b>: ${{ github.repository }}
             <b>Event:</b> <code>${{ github.event_name }}</code>
