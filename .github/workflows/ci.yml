@@ -1,17 +1,17 @@
-name: telegram message
+name: Telegram Notificator
 on: [push]
 jobs:
-
   build:
     name: Build
     runs-on: ubuntu-latest
     steps:
-      - name: try multiple message
+      - name: Telegram Notification
         uses: appleboy/telegram-action@master
         with:
           to: ${{ secrets.TELEGRAM_TO }}
           token: ${{ secrets.TELEGRAM_TOKEN }}
+          photo: './assets/github.jpg'
           format: html
           message: |
-            ⚡️ <a href="https://github.com/aszenz/repo/commit/${{ github.event.push.after }}">Commits</a> pushed to master by <em>${{ github.event.push.pusher.name }}</em> ⚡️
+            ⚡️ <a href="https://github.com/${{ github.actor }}/${{ repo }}/commit/${{ github.event.push.after }}"><b>Commits</b></a> pushed to master by <em>${{ github.event.push.pusher.name }}</em> ⚡️
             ${{ github.actor }} : ${{ github.event.head_commit.message }}
