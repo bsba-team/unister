@@ -2,7 +2,7 @@ name: Telegram Notificator
 on: [push]
 jobs:
   build:
-    name: Build
+    name: Push
     runs-on: ubuntu-latest
     steps:
       - name: Telegram Notification
@@ -13,5 +13,5 @@ jobs:
           photo: './assets/github.jpg'
           format: html
           message: |
-            ⚡️ <a href="https://github.com/${{ github.actor }}/${{ repo }}/commit/${{ github.event.push.after }}"><b>Commits</b></a> pushed to master by <em>${{ github.event.push.pusher.name }}</em> ⚡️
+            ⚡️ <a href="https://github.com/${{ github.actor }}/${{ github.repo }}/commit/${{ github.event.push.after }}"><b>Commits</b></a> pushed to master by <em>${{ github.event.push.pusher.name }}</em> ⚡️
             ${{ github.actor }} : ${{ github.event.head_commit.message }}
