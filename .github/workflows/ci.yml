@@ -19,6 +19,5 @@ jobs:
             <b>Event:</b> <code>${{ github.event_name }}</code>
             <b>Author:</b> <code>${{ github.actor }}</code>
             <b>Summary:</b> <code>${{ github.event.head_commit.message }}</code>
-            <b>Description:</b> <code>${{ github.event.head_commit.desc }}</code>
 
             <a href="https://github.com/${{ github.repository }}/commit/${{ github.sha }}">Commit</a> | <a href="https://github.com/${{ github.repository }}">Repo</a> | <a href="https://bsba.uz">Home</a>
