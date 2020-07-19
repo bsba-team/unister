@@ -13,9 +13,9 @@ jobs:
           token: ${{ secrets.TELEGRAM_TOKEN }}
           format: html
           message: |
-            <b>New GitHub Notification</b>
+            <b><a href="https://github.com/${{ github.repository }}">New GitHub Notification</a></b>
 
-            <b>Repo</b>: <a href="https://github.com/${{ github.repository }}">${{ github.repository }}</a>
+            <b>Repo</b>: ${{ github.repository }}
             <b>Event:</b> <code>${{ github.event_name }}</code>
             <b>Author:</b> <code>${{ github.actor }}</code>
             <b>Summary:</b> <code>${{ github.event.head_commit.message }}</code>
