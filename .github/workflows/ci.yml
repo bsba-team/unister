@@ -11,11 +11,12 @@ jobs:
         with:
           to: ${{ secrets.TELEGRAM_TO }}
           token: ${{ secrets.TELEGRAM_TOKEN }}
+          photo: assets/github.jpg
           format: html
           message: |
-            ⚡️ <a href="https://github.com/${{ github.repo.author }}/${{ github.repo.name }}/commit/${{ github.commit.sha }}"><b>Commits</b></a> pushed to master by <em>${{ github.event.push.pusher.name }}</em> ⚡️
-            <b>Event:</b> <code>${{ github.event.name }}</code>
-            <b>Author:</b> <code>${{ github.event.push.pusher.name }}</code>
+            <b>New GitHub Notification</b>
+
+            <b>Event:</b> <code>${{ github.event_name }}</code>
+            <b>Author:</b> <code>${{ github.actor }}</code>
             <b>Summary:</b> <code>${{ github.event.head_commit.message }}</code>
-            <b>Description:</b> <code>${{ github.event.head_commit.description }}</code>
-          photo: assets/github.jpg
+            <b>Description:</b> <code>${{ github.event.head_commit.desc }}</code>
