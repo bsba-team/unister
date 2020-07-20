@@ -2,18 +2,20 @@ const { composer, middleware } = require('../../core/bot')
 const { Markup, Extra } = require('telegraf')
 
 const consoles = require('../../layouts/consoles')
-const message = require('../../layouts/messages')
-const keyboard = require('../../layouts/keyboards')
 const ds = require('../../database/ds')
 
 composer.action(`repos`, async ctx => {
     const fetch = await ds("https://api.github.com/orgs/bsba-team/repos")
     const keyboard = Object.values(fetch).map((obj) => [Markup.callbackButton(`${obj["name"]}`, `repo_${obj["name"]}`)])
-    ctx.editMessageMedia({caption: `<b>Choose the project you would like to interact with:</b>`, type: "photo", media: {source: `./assets/github.jpg`}}, {
+    await ctx.editMessageMedia(
+        {
+            caption: `<b>Choose the project you would like to interact with:</b>`,
+            type: "photo",
+            media: {source: `./assets/github.jpg`}
+            }, {
         parse_mode: "HTML",
         reply_markup: Markup.inlineKeyboard(keyboard)
     })
-        .then(r => {r = '';console.log(r)})
 })
 
 composer.action(/repo_(.*)/ig, async ctx => {
