@@ -8,7 +8,7 @@
     "telegram": "genemator",
     "github": "genemators",
     "experience": ["Javascript (EcmaScript 2019)", "Typescript", "Python 2", "Python 3", "Java", "Kotlin", "C++", "C", "Assembly"],
-    "avatar": "https://github.com/genemators/bsba/raw/master/themes/obsidian/source/img/genemator/avatar.jpg"
+    "avatar": "./assets/avatars/genemator.jpg"
   },
   "Nagai Matsuge": {
     "name": "Bobur",
@@ -19,7 +19,7 @@
     "telegram": "Komiljonov_B",
     "github": "NagaiMatsuge",
     "experience": ["JavaScript", "PHP", "Python", "SQL"],
-    "avatar": "https://github.com/genemators/bsba/raw/master/themes/obsidian/source/img/nagaimatsuge/avatar.jpg"
+    "avatar": "./assets/avatars/nagaimatsuge.jpg"
   },
   "Itsuki Jayden": {
     "name": "Abdullo",
@@ -30,7 +30,7 @@
     "telegram": "Sky_Coffees",
     "github": "Jayden-Izanagi",
     "experience": ["C++", "C#", "Python", "JavaScript"],
-    "avatar": "https://github.com/genemators/bsba/raw/master/themes/obsidian/source/img/itsukijayden/avatar.jpg"
+    "avatar": "./assets/avatars/jayden.jpg"
   },
   "Mr.Abdurakhimov": {
     "name": "Mukhammadyusuf",
@@ -41,6 +41,6 @@
     "telegram": "iblogs_uz",
     "github": "MrAbdurakhimov",
     "experience": ["PHP", "JavaScript", "C++", "Python"],
-    "avatar": "https://github.com/genemators/bsba/raw/master/themes/obsidian/source/img/mrabdurakhimov/avatar.jpg"
+    "avatar": "./assets/avatars/mrabdurakhimov.jpg"
   }
 }
