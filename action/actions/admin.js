@@ -14,10 +14,9 @@ composer.action(`admins`, async ctx => {
             list.push([Markup.callbackButton(admin, `admin_${admin}`)])
         } return Markup.inlineKeyboard(list)
     }
-    const picture = "https://github.com/bsba-team/unister/raw/master/assets/guard.png"
 
     await ctx.editMessageMedia({
-        type: 'photo', media: picture,
+        type: 'photo', media: {source: './assets/admins.png'},
         caption: message.admin[0]
     }, {
         parse_mode: "HTML",
@@ -39,7 +38,7 @@ composer.action(/admin_(.+)/ig, async ctx => {
         `<b>Experiences:</b> <code>${found["experience"].toString()}</code>`
     await ctx.editMessageMedia({
         type: 'photo', caption: result,
-        media: found['avatar']
+        media: {source: found["avatar"]}
     }, {
         parse_mode: "HTML",
         disable_web_page_preview: true,

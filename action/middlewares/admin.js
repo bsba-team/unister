@@ -14,8 +14,7 @@ composer.command(`admins`, async ctx => {
             list.push([Markup.callbackButton(admin, `admin_${admin}`)])
         } return Markup.inlineKeyboard(list)
     }
-    const photo = "https://github.com/bsba-team/unister/raw/master/assets/guard.png"
-    await ctx.replyWithPhoto(photo, {
+    await ctx.replyWithPhoto({source: './assets/admins.png'}, {
         parse_mode: "HTML",
         caption: message.admin[0],
         reply_markup: await adminList()
