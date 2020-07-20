@@ -9,7 +9,7 @@ const ds = require('../../database/ds')
 composer.action(`repos`, async ctx => {
     const fetch = await ds("https://api.github.com/orgs/bsba-team/repos")
     const keyboard = Object.values(fetch).map((obj) => [Markup.callbackButton(`${obj["name"]}`, `repo_${obj["name"]}`)])
-    ctx.editMessageText(`<b>Choose the project you would like to interact with:</b>`, {
+    ctx.editMessageMedia({caption: `<b>Choose the project you would like to interact with:</b>`, type: "photo", media: {source: `./assets/github.jpg`}}, {
         parse_mode: "HTML",
         reply_markup: Markup.inlineKeyboard(keyboard)
     })
@@ -43,7 +43,7 @@ composer.action(/repo_(.*)/ig, async ctx => {
         `<b>Created Date:</b> ${repo.created_at}` + `\n` +
         `\n` +
         `<code>👁: ${repo.followers}</code> <b>|</b> <code>🌟: ${repo.stars}</code> <b>|</b> <code>👥: ${repo.subscribers}</code>`
-    await ctx.editMessageText(text, {
+    await ctx.editMessageMedia({caption: text, type: "photo", media: {source: `./assets/repo.png`}}, {
         parse_mode: "HTML",
         reply_markup: Markup.inlineKeyboard([
             [

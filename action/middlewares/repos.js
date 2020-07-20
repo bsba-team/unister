@@ -9,7 +9,9 @@ const ds = require('../../database/ds')
 composer.command(`repos`, async ctx => {
     const fetch = await ds("https://api.github.com/orgs/bsba-team/repos")
     const keyboard = Object.values(fetch).map((obj) => [Markup.callbackButton(`${obj["name"]}`, `repo_${obj["name"]}`)])
-    ctx.replyWithHTML(`<b>Choose the project you would like to interact with:</b>`, {
+    ctx.replyWithPhoto({source: `./assets/github.jpg`}, {
+        caption: `<b>Choose the project you would like to interact with:</b>`,
+        parse_mode: "HTML",
         reply_markup: Markup.inlineKeyboard(keyboard)
     })
         .then(r => {r = '';console.log(r)})
