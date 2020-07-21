@@ -11,7 +11,7 @@ composer.action(`repos`, async ctx => {
         {
             caption: `<b>Choose the project you would like to interact with:</b>`,
             type: "photo",
-            media: {source: `./assets/github.jpg`}
+            media: {source: `./assets/repo_preview.png`}
             }, {
         parse_mode: "HTML",
         reply_markup: Markup.inlineKeyboard(keyboard)
