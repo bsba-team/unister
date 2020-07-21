@@ -17,6 +17,7 @@ exports.help =
     `/minecraft - <code>check server status</code>` + `\n` +
     `/admins - <code>get infos about admins</code>` + `\n` +
     `/repos - <code>get infos about repos</code>` + `\n` +
+    `/join - <code>request to join our organisation</code>` + `\n` +
     `\n` +
     `<i>In order to our inline mode, switch to inline mode ` +
     `by typing: @bsba_bot and then start typing something there.</i>`
