@@ -11,7 +11,7 @@ composer.action(`repos`, async ctx => {
         {
             caption: `<b>Choose the project you would like to interact with:</b>`,
             type: "photo",
-            media: {source: `./assets/repo_preview.png`}
+            media: {source: `./assets/repo.png`}
             }, {
         parse_mode: "HTML",
         reply_markup: Markup.inlineKeyboard(keyboard)
@@ -45,7 +45,7 @@ composer.action(/repo_(.*)/ig, async ctx => {
         `<b>Created Date:</b> ${repo.created_at}` + `\n` +
         `\n` +
         `<code>👁: ${repo.followers}</code> <b>|</b> <code>🌟: ${repo.stars}</code> <b>|</b> <code>👥: ${repo.subscribers}</code>`
-    await ctx.editMessageMedia({caption: text, type: "photo", media: {source: `./assets/repo_preview.png`}}, {
+    await ctx.editMessageMedia({caption: text, type: "photo", media: {source: `./assets/repo.png`}}, {
         parse_mode: "HTML",
         reply_markup: Markup.inlineKeyboard([
             [
