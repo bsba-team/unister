@@ -12,7 +12,6 @@ composer.command(`repos`, async ctx => {
         parse_mode: "HTML",
         reply_markup: Markup.inlineKeyboard(keyboard)
     })
-        .then(r => {r = '';console.log(r)})
 })
 
 middleware(composer)

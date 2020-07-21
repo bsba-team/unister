@@ -4,8 +4,8 @@ const consoles = require('../../layouts/consoles')
 const message = require('../../layouts/messages')
 const keyboard = require('../../layouts/keyboards')
 
-composer.action(`help`, ctx => {
-    ctx.editMessageText(message.help, {
+composer.action(`help`, async ctx => {
+    await ctx.editMessageText(message.help, {
         parse_mode: "HTML",
         reply_markup: keyboard.help
     })
