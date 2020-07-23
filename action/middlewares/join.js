@@ -20,6 +20,10 @@ composer.hears(/\/join (.+)/ig,async ctx => {
             parse_mode: "HTML",
             reply_markup: Markup.inlineKeyboard([
                 [
+                  Markup.callbackButton(`✅`, `accept_form_${ctx.from.id}`),
+                  Markup.callbackButton(`❌`, `decline_form_${ctx.from.id}`)
+                ],
+                [
                     Markup.urlButton(`Check pending invitations`, `https://github.com/orgs/bsba-team/people/pending_invitations`)
                 ],
                 [
