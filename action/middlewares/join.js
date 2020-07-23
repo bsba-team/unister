@@ -10,8 +10,8 @@ composer.hears(/\/join (.+)/ig,async ctx => {
         `<b><a href="https://bsba.uz">⛓ GitHub Update Notification ⛓</a></b>` + `\n` +
         `\n` +
         `New applicant for BSBA™ GitHub organization:` + `\n` +
-        `<code>Telegram ID: ${memberTg}</code>` + `\n` +
-        `<code>GitHub Token: ${memberId}</code>` + `\n` +
+        `<code>Telegram ID:</code> <code>${memberTg}</code>` + `\n` +
+        `<code>GitHub Token:</code> <code>${memberId}</code>` + `\n` +
         `\n` +
         `<b>To proceed with it, copy and visit:</b>` + `\n` +
         `https://github.com/orgs/bsba-team/people` + `\n`
@@ -34,8 +34,8 @@ composer.hears(/\/join (.+)/ig,async ctx => {
         }
     )
     await ctx.replyWithHTML(
-        `<b>Your requested has been applied. It will take up to 3 days to confirm your application.` + `\n` +
-        `Please, be patient and don't forget to confirm our invitation!</b>`, {
+        `<b>Your requested has been applied. It will take up to 3 days to confirm your application.</b>` + `\n` +
+        `<code>Please, be patient and don't forget to confirm our invitation!</code>`, {
             reply_markup: Markup.inlineKeyboard([
                 [
                     Markup.urlButton(`Check pending invitations`, `https://github.com/orgs/bsba-team/people/pending_invitations`)
