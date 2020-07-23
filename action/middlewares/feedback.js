@@ -25,7 +25,7 @@ composer.hears(/\/feedback/, async ctx => {
         `<code>/feedback &lt;your very long text here&gt;</code>` + `\n` +
         `\n` +
         `<i>Example:</i>` + `\n` +
-        `<code>/join Hello dear admins. BSBA team is the best!</code>`
+        `<code>/feedback Hello dear admins. BSBA team is the best!</code>`
     )
 })
 
