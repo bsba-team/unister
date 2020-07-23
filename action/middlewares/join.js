@@ -40,11 +40,13 @@ composer.hears(/\/join (.+)/ig,async ctx => {
 composer.hears(/\/join/,async ctx => {
     await ctx.replyWithHTML(
         `<b>In order to join our github organisation, choose and type as we showed in our examples below:</b>` + `\n` +
-        `<code>/join &lt;github.username&gt;</code>` + `\n` +
-        `<code>/join &lt;github@email&gt;</code>` + `\n` +
+        `<code>/join &lt;github username&gt;</code>` + `\n` +
+        `<code>/join &lt;github email address&gt;</code>` + `\n` +
         `\n` +
         `<b>Example:</b>` + `\n` +
-        `<code>/join genemators</code>`)
+        `<code>/join example-name</code>` + `\n` +
+        `<code>/join example@gmail.com</code>`)
+
 })
 
 middleware(composer)
