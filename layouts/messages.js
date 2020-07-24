@@ -17,6 +17,7 @@ exports.help =
     `<b>List of available commands:</b>` + `\n` +
     `\n` +
     `/help - <code>show this helper message</code>` + `\n` +
+    `/check - <code>check health of API responses</code>` + `\n` +
     `/minecraft - <code>check server status</code>` + `\n` +
     `/admins - <code>get infos about admins</code>` + `\n` +
     `/repos - <code>get infos about repos</code>` + `\n` +
