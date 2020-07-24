@@ -1,5 +1,4 @@
 const { composer, middleware } = require('../../core/bot')
-const { Markup } = require('telegraf')
 const isReachable = require('is-reachable');
 
 const consoles = require('../../layouts/consoles')
