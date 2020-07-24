@@ -37,6 +37,47 @@ exports.minecraft = (data) =>
     `<b>Version: ${data.version}</b>` + `\n` +
     `<b>Software:</b> ${data["software"]}` + `\n`
 
-exports.admin = [
+exports.admin_menu =
     `<b>Choose an admin from the list to get information about:</b>`
-]
+
+exports.admin_view = (data, match) =>
+    `<a href="${data["avatar"]}"></a><a href="${data["profile"]}"><b>${match}</b></a>` + `\n` +
+    `<b>Name:</b> <code>${data["name"]}</code>` + `\n` +
+    `<b>Surname:</b> <code>${data["surname"]}</code>` + `\n` +
+    `<b>Status:</b> <code>${data["status"]}</code>` + `\n` +
+    `<b>Rank:</b> <code>${data["rank"]}</code>` + `\n` +
+    `<b>Experiences:</b> <code>${data["experience"].toString()}</code>`
+
+exports.check = async (github, telegram, uptime) =>
+    `<b>BSBA™ Bot status health checker:</b>` + `\n` +
+    `\n` +
+    `<b>Github API:</b> <code>${(github)}</code>` + `\n` +
+    `<b>Telegram API:</b> <code>${(telegram)}</code>` + `\n` +
+    `\n` +
+    `<b>Last Update:</b> <code>${uptime}</code>`
+
+exports.form_complete =
+    `You have already responded to applicant!`
+
+exports.form_guide =
+    `<b>In order to join our github organisation, choose and type as we showed in our examples below:</b>` + `\n` +
+    `<code>/join &lt;github username&gt;</code>` + `\n` +
+    `<code>/join &lt;github email address&gt;</code>` + `\n` +
+    `\n` +
+    `<b>Example:</b>` + `\n` +
+    `<code>/join example-name</code>` + `\n` +
+    `<code>/join example@gmail.com</code>`
+
+exports.form_notification = (TG, ID) =>
+    `<b><a href="https://bsba.uz">⛓ GitHub Update Notification ⛓</a></b>` + `\n` +
+    `\n` +
+    `New applicant for BSBA™ GitHub organization:` + `\n` +
+    `<code>Telegram ID:</code> <code>${TG}</code>` + `\n` +
+    `<code>GitHub Token:</code> <code>${ID}</code>` + `\n` +
+    `\n` +
+    `<b>To proceed with it, copy and visit:</b>` + `\n` +
+    `https://github.com/orgs/bsba-team/people` + `\n`
+
+exports.form_status =
+    `<b>Your requested has been applied. It will take up to 3 days to confirm your application.</b>` + `\n` +
+    `<code>Please, be patient and don't forget to confirm our invitation!</code>`

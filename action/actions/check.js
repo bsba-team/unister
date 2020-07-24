@@ -25,18 +25,9 @@ composer.action(`check`, async ctx => {
         }
     }
 
-    const text =
-        `<b>BSBA™ Bot status health checker:</b>` + `\n` +
-        `\n` +
-        `<b>Github API:</b> <code>${(await github())}</code>` + `\n` +
-        `<b>Telegram API:</b> <code>${(await telegram())}</code>` + `\n` +
-        `\n` +
-        `<b>Last Update:</b> <code>${uptime}</code>`
-    await ctx.editMessageText(text, {
+    await ctx.editMessageText(await message.check(await github(), await telegram(), uptime), {
         parse_mode: "HTML",
-        reply_markup: Markup.inlineKeyboard([
-            Markup.callbackButton(`🔃 Refresh`, `check`)
-        ])
+        reply_markup: keyboard.check
     })
 })
 

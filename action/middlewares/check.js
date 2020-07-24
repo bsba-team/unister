@@ -25,18 +25,8 @@ composer.command(`check`, async ctx => {
         }
     }
 
-    const text =
-        `<b>BSBA™ Bot status health checker:</b>` + `\n` +
-        `\n` +
-        `<b>Github API:</b> <code>${(await github())}</code>` + `\n` +
-        `<b>Telegram API:</b> <code>${(await telegram())}</code>` + `\n` +
-        `\n` +
-        `<b>Last Update:</b> <code>${uptime}</code>`
-
-    await ctx.replyWithHTML(text, {
-        reply_markup: Markup.inlineKeyboard([
-            Markup.callbackButton(`🔃 Refresh`, `check`)
-        ])
+    await ctx.replyWithHTML(await message.check(await github(), await telegram(), uptime), {
+        reply_markup: keyboard.check
     })
 })
 

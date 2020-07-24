@@ -1,63 +1,29 @@
 const { composer, middleware } = require('../../core/bot')
-const { Markup } = require('telegraf')
 
 const consoles = require('../../layouts/consoles')
+const message = require('../../layouts/messages')
+const keyboard = require('../../layouts/keyboards')
 
 composer.hears(/\/join (.+)/ig,async ctx => {
     const memberTg = ctx.from.id
     const memberId = ctx.match[1]
-    const text =
-        `<b><a href="https://bsba.uz">⛓ GitHub Update Notification ⛓</a></b>` + `\n` +
-        `\n` +
-        `New applicant for BSBA™ GitHub organization:` + `\n` +
-        `<code>Telegram ID:</code> <code>${memberTg}</code>` + `\n` +
-        `<code>GitHub Token:</code> <code>${memberId}</code>` + `\n` +
-        `\n` +
-        `<b>To proceed with it, copy and visit:</b>` + `\n` +
-        `https://github.com/orgs/bsba-team/people` + `\n`
-    await ctx.telegram.sendMessage(-1001347275021, text ,
+
+    await ctx.telegram.sendMessage(-1001347275021, message.form_notification(memberTg, memberId) ,
         {
             disable_web_page_preview: true,
             parse_mode: "HTML",
-            reply_markup: Markup.inlineKeyboard([
-                [
-                  Markup.callbackButton(`✅`, `accept_form_${ctx.from.id}`),
-                  Markup.callbackButton(`❌`, `decline_form_${ctx.from.id}`)
-                ],
-                [
-                    Markup.urlButton(`Check pending invitations`, `https://github.com/orgs/bsba-team/people/pending_invitations`)
-                ],
-                [
-                    Markup.urlButton(`Check pending collaborators`, `https://github.com/orgs/bsba-team/pending_collaborators`)
-                ]
-            ])
+            reply_markup: keyboard.form_admin(ctx.from.id)
         }
     )
     await ctx.replyWithHTML(
-        `<b>Your requested has been applied. It will take up to 3 days to confirm your application.</b>` + `\n` +
-        `<code>Please, be patient and don't forget to confirm our invitation!</code>`, {
-            reply_markup: Markup.inlineKeyboard([
-                [
-                    Markup.urlButton(`Check pending invitations`, `https://github.com/orgs/bsba-team/people/pending_invitations`)
-                ],
-                [
-                    Markup.urlButton(`Check pending collaborators`, `https://github.com/orgs/bsba-team/pending_collaborators`)
-                ]
-            ])
+        message.form_status, {
+            reply_markup: keyboard.form_request
         }
     )
 })
 
 composer.hears(/\/join/,async ctx => {
-    await ctx.replyWithHTML(
-        `<b>In order to join our github organisation, choose and type as we showed in our examples below:</b>` + `\n` +
-        `<code>/join &lt;github username&gt;</code>` + `\n` +
-        `<code>/join &lt;github email address&gt;</code>` + `\n` +
-        `\n` +
-        `<b>Example:</b>` + `\n` +
-        `<code>/join example-name</code>` + `\n` +
-        `<code>/join example@gmail.com</code>`)
-
+    await ctx.replyWithHTML(message.form_guide)
 })
 
 middleware(composer)

@@ -9,7 +9,6 @@ composer.action(`help`, async ctx => {
         parse_mode: "HTML",
         reply_markup: keyboard.help
     })
-        .then(r => {r = '';console.log(r)})
 })
 
 middleware(composer)
