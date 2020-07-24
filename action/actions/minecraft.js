@@ -7,8 +7,7 @@ const keyboard = require('../../layouts/keyboards')
 const ds = require('../../database/ds')
 
 composer.action(`minecraft`, async ctx => {
-    let now = new Date()
-    let uptime = await now.toLocaleString();
+    let uptime = await new Date().toLocaleString();
     const database = await ds(minecraft)
 
     if (database === null || database["debug"].ping === false) {
