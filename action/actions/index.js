@@ -1,6 +1,6 @@
 require('./help')
-require('./minecraft')
+require('./join')
 require('./admin')
 require('./repos')
-require('./join')
 require('./check')
+require('./minecraft')
