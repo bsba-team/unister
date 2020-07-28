@@ -4,7 +4,7 @@ const consoles = require('../../layouts/consoles')
 const message = require('../../layouts/messages')
 const keyboard = require('../../layouts/keyboards')
 
-composer.on('message', async ctx => {
+composer.on('text', async ctx => {
     await ctx.replyWithHTML(message.invalid, {
         reply_markup: keyboard.invalid
     })
