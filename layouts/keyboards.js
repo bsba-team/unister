@@ -94,3 +94,13 @@ exports.invalid =
     Markup.inlineKeyboard([
         Markup.callbackButton(`Show available commands`, `help`)
     ])
+
+exports.photo =
+    Markup.inlineKeyboard([
+        [
+            Markup.urlButton(`Upload your own art!`, `https://t.me/bsba_bot`)
+        ],
+        [
+            Markup.urlButton(`Community Group`, `https://t.me/bsba_group`)
+        ]
+    ])
