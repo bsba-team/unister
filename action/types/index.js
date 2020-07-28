@@ -1,1 +1,2 @@
 require('./photo')
+require('./inline')

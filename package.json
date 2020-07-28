@@ -37,5 +37,8 @@
     "is-reachable": "^4.0.0",
     "nodemon": "^2.0.4",
     "telegraf": "^3.38.0"
+  },
+  "devDependencies": {
+    "fuzzy": "^0.1.3"
   }
 }
