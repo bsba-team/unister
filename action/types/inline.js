@@ -28,6 +28,7 @@ composer.on('inline_query', async ({ inlineQuery, answerInlineQuery }) => {
                 Markup.urlButton(`Repositories`, `https://github.com/bsba-team/`),
             ], { columns: 2 }),
             input_message_content: {
+                media: {type: "photo", source: "https://github.com/bsba-team/unister/raw/master/assets/repo.png"},
                 message_text:
                     `<b><a href="${data["html_url"]}">GitHub Project Review</a></b>` + `\n` +
                     `\n` +
