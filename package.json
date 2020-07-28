@@ -36,9 +36,7 @@
     "dotenv": "^8.2.0",
     "is-reachable": "^4.0.0",
     "nodemon": "^2.0.4",
-    "telegraf": "^3.38.0"
-  },
-  "devDependencies": {
+    "telegraf": "^3.38.0",
     "fuzzy": "^0.1.3"
   }
 }
