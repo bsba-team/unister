@@ -81,3 +81,6 @@ exports.form_notification = (TG, ID) =>
 exports.form_status =
     `<b>Your requested has been applied. It will take up to 3 days to confirm your application.</b>` + `\n` +
     `<code>Please, be patient and don't forget to confirm our invitation!</code>`
+
+exports.invalid =
+    `<b>This command or message is invalid. Please see our command list for more information!</b>`

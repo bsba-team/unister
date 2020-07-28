@@ -8,7 +8,7 @@ exports.start = Markup.inlineKeyboard([
 
 exports.help = Markup.inlineKeyboard([
     [
-        Markup.switchToCurrentChatButton("Inline Mode", "mc")
+        Markup.switchToCurrentChatButton("Inline Mode (Beta)", "mc")
     ]
 ])
 
@@ -88,4 +88,9 @@ exports.form_admin = (data) =>
         [
             Markup.urlButton(`Check pending collaborators`, `https://github.com/orgs/bsba-team/pending_collaborators`)
         ]
+    ])
+
+exports.invalid =
+    Markup.inlineKeyboard([
+        Markup.callbackButton(`Show available commands`, `help`)
     ])
