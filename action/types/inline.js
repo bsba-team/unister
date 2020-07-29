@@ -27,7 +27,7 @@ composer.on('inline_query', async ({ inlineQuery, answerInlineQuery }) => {
             description: `${data["description"]}`,
             reply_markup: keyboard.inline(data),
             input_message_content: {
-                message_text: message.invalid(data),
+                message_text: message.inline(data),
                 parse_mode: 'HTML'
             }
         })
