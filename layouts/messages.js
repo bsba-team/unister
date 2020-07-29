@@ -20,9 +20,12 @@ exports.help =
     `/check - <code>check health of API responses</code>` + `\n` +
     `/minecraft - <code>check server status</code>` + `\n` +
     `/admins - <code>get infos about admins</code>` + `\n` +
-    // `/repos - <code>get infos about repos</code>` + `\n` +
     `/join - <code>request to join our organisation</code>` + `\n` +
     `/feedback - <code>leave a feedback to admins</code>` + `\n` +
+    `\n` +
+    `<b>Admin commands:</b>` + `\n` +
+    `/add - <code>add temporary admin</code>` + `\n` +
+    `/send - <code>send message to users</code>` + `\n` +
     `\n` +
     `<i>In order to use our inline mode, switch to inline mode ` +
     `by typing: @bsba_bot and then start typing something there.</i>`
@@ -105,3 +108,6 @@ exports.inline = (data) =>
     `<b>Created Date:</b> ${data["created_at"]}` + `\n` +
     `\n` +
     `<code>👁: ${data["watchers_count"]}</code> <b>|</b> <code>🌟: ${data["stargazers_count"]}</code> <b>|</b> <code>👥: ${data["subscribers_count"]}</code>`
+
+exports.error_admin =
+    `<b>You don't have enough power to do that!</b>`

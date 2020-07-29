@@ -1,9 +1,3 @@
-/**
- * Deprecated handlers
- */
-
-// require('./repos')
-
 require('./help')
 require('./join')
 require('./send')
@@ -12,3 +6,4 @@ require('./check')
 require('./admin')
 require('./feedback')
 require('./minecraft')
+require('./add')

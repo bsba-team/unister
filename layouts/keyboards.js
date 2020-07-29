@@ -110,3 +110,8 @@ exports.inline = (data) =>
         Markup.urlButton(`GitHub`, `${data["html_url"]}`),
         Markup.urlButton(`Repositories`, `https://github.com/bsba-team/`),
     ], { columns: 2 })
+
+exports.error_admin =
+    Markup.inlineKeyboard([
+        Markup.urlButton(`Contact with admin`, `https://t.me/genemator`)
+    ])

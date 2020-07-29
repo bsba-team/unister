@@ -1,20 +1,29 @@
 const { composer, middleware } = require('../../core/bot')
 
 const consoles = require('../../layouts/consoles')
-const message = require('../../layouts/messages')
-const keyboard = require('../../layouts/keyboards')
+const security = require('../security')
 
 composer.hears(/\/send (.*) : (.*)/,async ctx => {
     const senderId = ctx.match[1]
     const senderMsg = ctx.match[2]
-    await ctx.telegram.sendMessage(senderId,
-        `<b>Reply from an admin:</b>` + `\n` +
-        `\n` +
-        `<code>${senderMsg}</code>` + `\n`, {
-        parse_mode: "HTML"
-        }
-    )
-    await ctx.replyWithHTML(`<b>Successfully sent!</b>`)
+    const user = ctx.from.id
+
+    await security(user, ctx, async () => {
+        await ctx.telegram.sendMessage(senderId,
+            `<b>Reply from an admin:</b>` + `\n` +
+            `\n` +
+            `<code>${senderMsg}</code>` + `\n`, {
+                parse_mode: "HTML"
+            }
+        )
+            .then(async () => {
+                await ctx.replyWithHTML(`<b>Successfully sent!</b>`)
+            })
+            .catch(async () => {
+                await ctx.replyWithHTML(`<b>User not activated or blocked!</b>`)
+            })
+
+    })
 })
 
 composer.hears(/\/send/,async ctx => {

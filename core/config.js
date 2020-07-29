@@ -4,7 +4,8 @@ const environment = process.env.ENVIRONMENT
 const minecraft = process.env.MINECRAFT
 const domain = process.env.DOMAIN
 const port = process.env.PORT
+const temporary = []
 
 module.exports = {
-    token, owner, environment, minecraft, domain, port
+    token, owner, environment, minecraft, domain, port, temporary
 }

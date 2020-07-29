@@ -1,9 +1,3 @@
-/**
- * Deprecated handlers
- */
-
-// require('./repos')
-
 require('./help')
 require('./join')
 require('./admin')
