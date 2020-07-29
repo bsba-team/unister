@@ -16,7 +16,7 @@ composer.hears(/\/add/,async ctx => {
         await security(ctx.from.id, ctx, async () => {
             await environment.temporary.push(ctx.message.reply_to_message.from.id)
             await ctx.replyWithHTML(`<b>Successfully added a temporary admin!</b>`)
-            await ctx.deleteMessage(ctx.message.message_id)
+            // await ctx.deleteMessage(ctx.message.message_id)
         })
     } else {
         await ctx.replyWithHTML(
