@@ -24,7 +24,7 @@ exports.help =
     `/join - <code>request to join our organisation</code>` + `\n` +
     `/feedback - <code>leave a feedback to admins</code>` + `\n` +
     `\n` +
-    `<i>In order to our inline mode, switch to inline mode ` +
+    `<i>In order to use our inline mode, switch to inline mode ` +
     `by typing: @bsba_bot and then start typing something there.</i>`
 
 exports.minecraft = (data) =>
