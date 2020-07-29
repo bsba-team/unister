@@ -3,10 +3,11 @@ const { composer, middleware } = require('../../core/bot')
 const consoles = require('../../layouts/consoles')
 const message = require('../../layouts/messages')
 const keyboard = require('../../layouts/keyboards')
+const env = require('../../core/env')
 
 composer.hears(/\/feedback (.*)/ig, async ctx => {
     const feedbackText = ctx.match[1]
-    await ctx.telegram.sendMessage(-1001347275021,
+    await ctx.telegram.sendMessage(env.CONTROLLER,
         `<b>New feedback from</b> <code>${ctx.from.id}</code>:` + `\n` +
         `\n` +
         `<i>${feedbackText}</i>`, {
