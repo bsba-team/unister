@@ -1,6 +1,11 @@
+/**
+ * Deprecated handlers
+ */
+
+// require('./repos')
+
 require('./help')
 require('./join')
 require('./admin')
-// require('./repos')
 require('./check')
 require('./minecraft')
