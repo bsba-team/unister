@@ -20,7 +20,7 @@ exports.help =
     `/check - <code>check health of API responses</code>` + `\n` +
     `/minecraft - <code>check server status</code>` + `\n` +
     `/admins - <code>get infos about admins</code>` + `\n` +
-    `/repos - <code>get infos about repos</code>` + `\n` +
+    // `/repos - <code>get infos about repos</code>` + `\n` +
     `/join - <code>request to join our organisation</code>` + `\n` +
     `/feedback - <code>leave a feedback to admins</code>` + `\n` +
     `\n` +

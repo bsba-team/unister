@@ -8,7 +8,7 @@ exports.start = Markup.inlineKeyboard([
 
 exports.help = Markup.inlineKeyboard([
     [
-        Markup.switchToCurrentChatButton("Inline Mode (Beta)", "mc")
+        Markup.switchToCurrentChatButton("Inline Mode (Beta)", "")
     ]
 ])
 
