@@ -90,3 +90,15 @@ exports.photo = (data) =>
     `<b>A new photo upload by ${data.from.first_name}</b>` + `\n` +
     `\n` +
     `<i>${data.message.caption}</i>`
+
+exports.inline = (data) =>
+    `<b><a href="${data["html_url"]}">GitHub Project Review</a></b>` + `\n` +
+    `\n` +
+    `<b>Description:</b> ${data["description"]}` + `\n` +
+    `<b>Forks:</b> ${data["forks_count"]}` + `\n` +
+    `<b>Issues:</b> ${data["open_issues_count"]}` + `\n` +
+    `<b>License:</b> ${data["license"]["spdx_id"]}` + `\n` +
+    `<b>Programming Language:</b> ${data["language"]}` + `\n` +
+    `<b>Created Date:</b> ${data["created_at"]}` + `\n` +
+    `\n` +
+    `<code>👁: ${data["watchers_count"]}</code> <b>|</b> <code>🌟: ${data["stargazers_count"]}</code> <b>|</b> <code>👥: ${data["subscribers_count"]}</code>`

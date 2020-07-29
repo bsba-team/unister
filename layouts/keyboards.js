@@ -104,3 +104,9 @@ exports.photo =
             Markup.urlButton(`Community Group`, `https://t.me/bsba_group`)
         ]
     ])
+
+exports.inline = (data) =>
+    Markup.inlineKeyboard([
+        Markup.urlButton(`GitHub`, `${data["html_url"]}`),
+        Markup.urlButton(`Repositories`, `https://github.com/bsba-team/`),
+    ], { columns: 2 })

@@ -2,6 +2,8 @@ const { composer, middleware } = require('../../core/bot')
 const { Markup } = require('telegraf')
 
 const consoles = require('../../layouts/consoles')
+const message = require('../../layouts/messages')
+const keyboard = require('../../layouts/keyboards')
 const ds = require('../../database/ds')
 
 composer.action(`repos`, async ctx => {
