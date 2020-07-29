@@ -1,5 +1,7 @@
-const { middleware, composer } = require('../../core/bot')
-const session = require('telegraf/session'),
-    Stage = require('telegraf/stage'),
-    Scene = require('telegraf/scenes/base'),
-    { leave } = Stage
+module.exports = async (id, func) => {
+    if (true) {
+        await func()
+    } else {
+        return null
+    }
+}

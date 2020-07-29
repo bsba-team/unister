@@ -17,7 +17,7 @@ exports.wrongEnv = () => {
     console.log("Bot can't be started due to wrong environment!".red.bold)
 }
 
-exports.module = (filename) => {
+exports.module = (filename = __filename) => {
     const modules = path.dirname(filename).split(path.sep).pop() + "/" + path.basename(filename, '.js')
     console.log("The module ".yellow.bold + modules.yellow+ " has been loaded...".yellow.bold)
 }
