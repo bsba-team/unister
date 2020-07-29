@@ -27,7 +27,8 @@ composer.on('inline_query', async ({ inlineQuery, answerInlineQuery }) => {
             reply_markup: keyboard.inline(data),
             input_message_content: {
                 message_text: message.inline(data),
-                parse_mode: 'HTML'
+                parse_mode: 'HTML',
+                disable_web_page_preview: true
             }
         })
         indexation++
