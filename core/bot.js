@@ -9,6 +9,10 @@ const middleware = (composer) => {
     bot.use(composer.middleware())
 }
 
+bot.telegram.getMe().then((botInfo) => {
+    bot.options.username = botInfo.username;
+});
+
 if (environment === "heroku") {
     bot.launch({
         webhook: {
