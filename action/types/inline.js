@@ -1,7 +1,6 @@
 const { composer, middleware } = require('../../core/bot')
 
 const fuzzy = require('fuzzy');
-const fs = require('fs')
 
 const consoles = require('../../layouts/consoles')
 const message = require('../../layouts/messages')
