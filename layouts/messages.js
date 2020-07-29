@@ -85,6 +85,9 @@ exports.form_status =
 exports.invalid =
     `<b>This command or message is invalid. Please see our command list for more information!</b>`
 
+exports.invalid_query =
+    `<b>Ehm!</b>`
+
 exports.photo = (data) =>
     `<b>#photo</b>` + `\n` +
     `<b>A new photo upload by ${data.from.first_name}</b>` + `\n` +
