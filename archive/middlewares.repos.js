@@ -1,8 +1,8 @@
-const { composer, middleware } = require('../../core/bot')
+const { composer, middleware } = require('../core/bot')
 const { Markup, Extra } = require('telegraf')
 
-const consoles = require('../../layouts/consoles')
-const ds = require('../../database/ds')
+const consoles = require('../layouts/consoles')
+const ds = require('../database/ds')
 
 composer.command(`repos`, async ctx => {
     const fetch = await ds("https://api.github.com/orgs/bsba-team/repos")

@@ -1,10 +1,10 @@
-const { composer, middleware } = require('../../core/bot')
+const { composer, middleware } = require('../core/bot')
 const { Markup } = require('telegraf')
 
-const consoles = require('../../layouts/consoles')
-const message = require('../../layouts/messages')
-const keyboard = require('../../layouts/keyboards')
-const ds = require('../../database/ds')
+const consoles = require('../layouts/consoles')
+const message = require('../layouts/messages')
+const keyboard = require('../layouts/keyboards')
+const ds = require('../database/ds')
 
 composer.action(`repos`, async ctx => {
     const fetch = await ds("https://api.github.com/orgs/bsba-team/repos")
