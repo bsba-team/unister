@@ -97,6 +97,12 @@ exports.photo = (data) =>
     `\n` +
     `<i>${data.message.caption}</i>`
 
+exports.video = (data) =>
+    `<b>#video</b>` + `\n` +
+    `<b>A new video upload by ${data.from.first_name}</b>` + `\n` +
+    `\n` +
+    `<i>${data.message.caption}</i>`
+
 exports.inline = (data) =>
     `<b><a href="${data["html_url"]}">GitHub Project Review</a></b>` + `\n` +
     `\n` +

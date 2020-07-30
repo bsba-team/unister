@@ -105,6 +105,16 @@ exports.photo =
         ]
     ])
 
+exports.video =
+    Markup.inlineKeyboard([
+        [
+            Markup.urlButton(`Upload your own video!`, `https://t.me/bsba_bot`)
+        ],
+        [
+            Markup.urlButton(`Community Group`, `https://t.me/bsba_group`)
+        ]
+    ])
+
 exports.inline = (data) =>
     Markup.inlineKeyboard([
         Markup.urlButton(`GitHub`, `${data["html_url"]}`),
