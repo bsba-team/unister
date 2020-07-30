@@ -1,6 +1,7 @@
 const { Telegraf, Composer } = require('telegraf')
 
 const consoles = require('../layouts/consoles')
+const env = require('./env')
 const { token, environment, domain, port } = require('./config')
 
 const bot = new Telegraf(token)

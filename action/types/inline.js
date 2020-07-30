@@ -9,8 +9,7 @@ const ds = require('../../database/ds')
 
 composer.on('inline_query', async ({ inlineQuery, answerInlineQuery }) => {
     let results = [], indexation = 1, base = `https://github.com/bsba-team/`, thumb = `https://github.com/bsba-team/unister/raw/master/assets/logo.png`
-    let database = await ds("https://api.github.com/orgs/bsba-team/repos")
-    let repos = await Object.values(database).map(function (obj) { return obj["name"]})
+    let repos = await Object.values(await ds("https://api.github.com/orgs/bsba-team/repos")).map(function (obj) { return obj["name"]})
     let similarities = await fuzzy.filter(inlineQuery.query, repos).sort().slice(0, 20)
     let found = await similarities.map(function(obj){ return obj.string})
     for (let key of found) {

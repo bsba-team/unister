@@ -4,9 +4,9 @@
   "description": "The telegram bot assistant of The BSBA™ team.",
   "main": "main.js",
   "scripts": {
-    "start": "node main",
-    "development": "nodemon main",
-    "test": "node test.js"
+    "start": "node bin/www",
+    "development": "nodemon bin/www",
+    "test": "node bin/test"
   },
   "engines": {
     "node": ">=14.5.0",
