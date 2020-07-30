@@ -6,9 +6,8 @@ const security = require('../security')
 composer.hears(/\/send (.*) : (.*)/,async ctx => {
     const senderId = ctx.match[1]
     const senderMsg = ctx.match[2]
-    const user = ctx.from.id
 
-    await security(user, ctx, async () => {
+    await security(ctx, async () => {
         await ctx.telegram.sendMessage(senderId,
             `<b>Reply from an admin:</b>` + `\n` +
             `\n` +

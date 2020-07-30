@@ -1,9 +1,9 @@
 const database = require('../../database/db');
 const message = require('../../layouts/messages')
 const keyboard = require('../../layouts/keyboards')
-const environment = require('../../core/config')
-module.exports = async (id, ctx, func) => {
-    if (database.users["users"].includes(id) || environment.temporary.includes(id)) {
+
+module.exports = async (ctx, func) => {
+    if ( database.users["eternal"].includes(ctx.from.id) || database.users["temporary"].includes(ctx.from.username)) {
         await func()
     } else {
         await ctx.replyWithHTML(message.error_admin, {

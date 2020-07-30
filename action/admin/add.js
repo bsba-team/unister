@@ -2,21 +2,23 @@ const { composer, middleware } = require('../../core/bot')
 
 const consoles = require('../../layouts/consoles')
 const security = require('../security')
-const environment = require('../../core/config')
+const database = require('../../database/db')
 
-composer.hears(/\/add (.*)/ig, async ctx => {
-    await security(ctx.from.id, ctx, async () => {
-        await environment.temporary.push(ctx.match[1])
+composer.hears(/\/add (.+)/ig, async ctx => {
+    await security(ctx, async () => {
+        await database.users["temporary"].push(ctx.match[1])
         await ctx.replyWithHTML(`<b>Successfully added a temporary admin!</b>`)
     })
 })
 
 composer.hears(/\/add/,async ctx => {
-    if (ctx.message.reply_to_message.from.id) {
-        await security(ctx.from.id, ctx, async () => {
-            await environment.temporary.push(ctx.message.reply_to_message.from.id)
+    if (ctx.message.reply_to_message.from.username) {
+        await security(ctx, async () => {
+            await database.users["temporary"].push(ctx.message.reply_to_message.from.username)
             await ctx.replyWithHTML(`<b>Successfully added a temporary admin!</b>`)
-            // await ctx.deleteMessage(ctx.message.message_id)
+            await ctx.deleteMessage(ctx.message.message_id).catch(async () => {
+                await ctx.replyWithHTML(`<b>Not enough permission to delete!</b>`)
+            })
         })
     } else {
         await ctx.replyWithHTML(

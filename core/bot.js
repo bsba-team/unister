@@ -2,9 +2,8 @@ const { Telegraf, Composer } = require('telegraf')
 
 const consoles = require('../layouts/consoles')
 const env = require('./env')
-const { token, environment, domain, port } = require('./config')
 
-const bot = new Telegraf(token)
+const bot = new Telegraf(env.BOT_TOKEN)
 const composer = new Composer()
 const middleware = (composer) => {
     bot.use(composer.middleware())
@@ -14,19 +13,19 @@ bot.telegram.getMe().then((botInfo) => {
     bot.options.username = botInfo.username;
 });
 
-if (environment === "heroku") {
+if (env.ENVIRONMENT === "heroku") {
     bot.launch({
         webhook: {
-            domain: domain,
+            domain: env.DOMAIN,
             hookPath: '/bot',
-            port: port
+            port: env.PORT
         }
     })
-        .then(() => consoles.launch(environment))
+        .then(() => consoles.launch(env.ENVIRONMENT))
         .catch(error => consoles.errors(error))
-} else if (environment === "local") {
+} else if (env.ENVIRONMENT === "local") {
     bot.launch()
-        .then(() => consoles.launch(environment))
+        .then(() => consoles.launch(env.ENVIRONMENT))
         .catch(error => consoles.errors(error))
 } else {
     consoles.wrongEnv()
