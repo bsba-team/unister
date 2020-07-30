@@ -21,7 +21,18 @@ if (env.ENVIRONMENT === "heroku") {
             port: env.PORT
         }
     })
-        .then(() => consoles.launch(env.ENVIRONMENT))
+        .then(async () => {
+            consoles.launch(env.ENVIRONMENT)
+            await bot.telegram.sendMessage(env.CONTROLLER,
+                `<a href="https://github.com/bsba-team/unister">⛓ GitHub Update Notification ⛓</a>` + `\n` +
+                `\n` +
+                `The telegram bot has just finished build process and has been restarted` + `\n` +
+                `\n` +
+                `For more information, visit:` + `\n` +
+                `<a href="https://t.me/bsba_bot"><u>https://t.me/bsba_bot</u></a>`, {
+                parse_mode: "HTML"
+                })
+        })
         .catch(error => consoles.errors(error))
 } else if (env.ENVIRONMENT === "local") {
     bot.launch()
