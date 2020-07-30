@@ -98,7 +98,7 @@ exports.photo = (data) =>
     `<b>#photo</b>` + `\n` +
     `<b>A new photo upload by ${data.from.first_name}</b>` + `\n` +
     `\n` +
-    `<i>${data.message.caption}</i>`
+    `<i>${data.message.caption || ` `}</i>`
 
 exports.video = (data) =>
     `<b>#video</b>` + `\n` +
