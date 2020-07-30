@@ -12,7 +12,7 @@ composer.command(`list`, async ctx => {
             await ctx.replyWithHTML(`<b>Temporary admin list is empty!</b>`)
         }
         else {
-            await ctx.replyWithHTML(list)
+            await ctx.replyWithHTML(`<b>Temporary admins:</b>\n<code>${list}</code>`)
         }
     })
 })
