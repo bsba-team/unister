@@ -24,7 +24,7 @@ if (env.ENVIRONMENT === "heroku") {
         .then(async () => {
             consoles.launch(env.ENVIRONMENT)
             await bot.telegram.sendMessage(env.CONTROLLER,
-                `<a href="https://github.com/bsba-team/unister">⛓ GitHub Update Notification ⛓</a>` + `\n` +
+                `<a href="https://github.com/bsba-team/unister"><b>⛓ GitHub Update Notification ⛓</b></a>` + `\n` +
                 `\n` +
                 `The telegram bot has just finished build process and has been restarted` + `\n` +
                 `\n` +
