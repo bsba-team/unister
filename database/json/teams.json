@@ -1,9 +1,14 @@
 {
   "UNiSOCKETS": {
-    "members": [
-      "genemator",
-      "saeween",
-      "RJ"
-    ]
+    "members": {
+      "Genemator": "https://t.me/genemator",
+      "Saeween": "https://t.me/saeween",
+      "Vesonify": "https://t.me/vesonify",
+      "Red": "https://t.me/sobranie_0",
+      "iCloudMTX": "https://t.me/iCloudMTX",
+      "H.Snowden": "https://t.me/Yanliz28041310",
+      "Beggi": "https://t.me/beggi7777777",
+      "Dj Medium": "https://t.me/softclubuz_llc"
+    }
   }
 }
