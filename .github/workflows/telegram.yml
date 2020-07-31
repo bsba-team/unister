@@ -1,5 +1,6 @@
-name: Telegram Notificator
+name: Telegram CI
 on: [push, pull_request]
+
 jobs:
   build:
     name: Push
