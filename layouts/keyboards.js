@@ -125,3 +125,11 @@ exports.error_admin =
     Markup.inlineKeyboard([
         Markup.urlButton(`Contact with admin`, `https://t.me/genemator`)
     ])
+
+exports.links = async (links) => {
+    const keyboard = []
+    for (let link of links) {
+        keyboard.push([Markup.urlButton(link["name"], `https://t.me/` + link["url"])])
+    }
+    return Markup.inlineKeyboard(keyboard)
+}

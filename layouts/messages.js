@@ -21,6 +21,7 @@ exports.help =
     `/stats - <code>check admin stats of user</code>` + `\n` +
     `/minecraft - <code>check server status</code>` + `\n` +
     `/admins - <code>get infos about admins</code>` + `\n` +
+    `/links - <code>show bsba url links</code>` + `\n` +
     `/join - <code>request to join our organisation</code>` + `\n` +
     `/feedback - <code>leave a feedback to admins</code>` + `\n` +
     `\n` +
@@ -120,3 +121,6 @@ exports.inline = (data) =>
 
 exports.error_admin =
     `<b>You don't have enough power to do that!</b>`
+
+exports.links =
+    `<b>Here are groups & bots of team BSBA:</b>`

@@ -1,0 +1,20 @@
+{
+  "links": [
+    {
+      "name": "Community Group",
+      "url": "bsba_group"
+    },
+    {
+      "name": "Media Channel",
+      "url": "bsba_media"
+    },
+    {
+      "name": "Main Bot",
+      "url": "bsba_bot"
+    },
+    {
+      "name": "Testing Phase Bot",
+      "url": "test_bsba_bot"
+    }
+  ]
+}
