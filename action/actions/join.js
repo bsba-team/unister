@@ -6,16 +6,20 @@ const keyboard = require('../../layouts/keyboards')
 
 composer.action(/accept_form_(.*)/ig, async ctx => {
     const applicant = ctx.match[1]
-    await ctx.telegram.sendMessage(applicant, `<b>You're application has been accepted!</b>`, {
-        parse_mode: "HTML"
+    await ctx.telegram.sendMessage(applicant,
+        message.form_accept(ctx), {
+        parse_mode: "HTML",
+        reply_markup: keyboard.form_accept
     })
     await ctx.editMessageReplyMarkup(keyboard.form_complete)
 })
 
 composer.action(/decline_form_(.*)/ig, async ctx => {
     const applicant = ctx.match[1]
-    await ctx.telegram.sendMessage(applicant, `<b>You're application has been declined!</b>`, {
-        parse_mode: "HTML"
+    await ctx.telegram.sendMessage(applicant,
+        message.form_decline(ctx), {
+        parse_mode: "HTML",
+        reply_markup: keyboard.form_decline
     })
     await ctx.editMessageReplyMarkup(keyboard.form_complete)
 })

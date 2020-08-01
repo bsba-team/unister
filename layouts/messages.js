@@ -89,6 +89,23 @@ exports.form_status =
     `<b>Your requested has been applied. It will take up to 3 days to confirm your application.</b>` + `\n` +
     `<code>Please, be patient and don't forget to confirm our invitation!</code>`
 
+exports.form_accept = (data) =>
+    `<b>✨Congratulations✨</b>` + `\n` +
+    `\n` +
+    `You have been invited to our organisation and from now so on, you are one of BSBA™ members.` + ` ` +
+    `In order to finish joining, please, open your mail and confirm our invitation that we sent to your github email!` + `\n` +
+    `\n` +
+    `<i>Also, take consider joining our Telegram based communities by pressing buttons below:</i>`
+
+exports.form_decline = (data) =>
+    `<b>We are so sorry seeing you declined</b>` + `\n` +
+    `\n` +
+    `Our staff members are trying to process tons of requests at the moment.` + ` ` +
+    `However, our staff members might be mistaken, so don't hesitate to send a new request!` + `\n` +
+    `\n` +
+    `<i>If you would like to send feedbacks, type /feedback and write your message to our staff</i>`
+
+
 exports.invalid =
     `<b>This command or message is invalid. Please see our command list for more information!</b>`
 

@@ -48,10 +48,18 @@ exports.check =
     ])
 
 exports.form_accept =
-    null
+    Markup.inlineKeyboard([
+        [
+            Markup.urlButton(`Community Group`, `https://t.me/bsba_group`)
+        ]
+    ])
 
 exports.form_decline =
-    null
+    Markup.inlineKeyboard([
+        [
+            Markup.urlButton(`Feedback Zone`, `https://t.me/bsba_r8`)
+        ]
+    ])
 
 exports.form_complete =
     Markup.inlineKeyboard([
