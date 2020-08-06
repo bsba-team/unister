@@ -9,7 +9,7 @@ composer.action(`check`, async ctx => {
     const uptime = await new Date().toLocaleString();
 
     const github = async () => {
-        if (await isReachable('github.com')) {
+        if (await isReachable('api.github.com')) {
             return "STABLE"
         } else {
             return "UNSTABLE"
