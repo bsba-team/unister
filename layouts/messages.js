@@ -130,7 +130,7 @@ exports.inline = (data) =>
     `<b>Description:</b> ${data["description"]}` + `\n` +
     `<b>Forks:</b> ${data["forks_count"]}` + `\n` +
     `<b>Issues:</b> ${data["open_issues_count"]}` + `\n` +
-    `<b>License:</b> ${data["license"]["spdx_id"]}` + `\n` +
+    `<b>License:</b> ${data["license"]["spdx_id"] || `No License`}` + `\n` +
     `<b>Programming Language:</b> ${data["language"]}` + `\n` +
     `<b>Created Date:</b> ${data["created_at"]}` + `\n` +
     `\n` +
