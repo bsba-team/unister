@@ -126,7 +126,7 @@ exports.video = (data) =>
     `<i>${data.message.caption || ` `}</i>`
 
 exports.inline = (data) =>
-    `<b><a href="${data["html_url"]}">GitHub Project Review</a></b>` + `\n` +
+    `<b><a href="https://media.giphy.com/media/3o7btUAWeunj1I7gBy/source.gif">〰</a><a href="${data["html_url"]}"> GitHub Project Review </a>〰</b>` + `\n` +
     `\n` +
     `<b>Description:</b> ${data["description"]}` + `\n` +
     `<b>Programming Language:</b> ${data["language"]}` + `\n` +
