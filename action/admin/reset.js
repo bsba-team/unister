@@ -7,7 +7,10 @@ const database = require('../../database/db')
 composer.command(`reset`, async ctx => {
     await security(ctx, async () => {
         database.users["temporary"] = []
-        await ctx.replyWithHTML(`<b>Temporary admins successfully reset!</b>`)
+        await ctx.replyWithAnimation({url: `https://media.giphy.com/media/l3vRaJUXduNxuZnLG/source.gif`}, {
+            parse_mode: "HTML",
+            caption: `<b>Temporary admins successfully reset!</b>`
+        })
     })
 })
 

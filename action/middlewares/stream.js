@@ -1,13 +1,16 @@
 const { composer, middleware } = require('../../core/bot')
 
+const fs = require('fs')
+
 const consoles = require('../../layouts/consoles')
 const message = require('../../layouts/messages')
 const keyboard = require('../../layouts/keyboards')
 
-composer.action(`help`, async ctx => {
-    await ctx.editMessageMedia({type: 'animation', media: `https://media.giphy.com/media/j2dYUL6ONL1TEuwDFP/source.gif`, caption: message.help}, {
+composer.command(`stream`, async ctx => {
+    await ctx.replyWithAnimation({url: `https://media.giphy.com/media/xT77Y2ZtcB1HWt2KmQ/source.gif`}, {
+        caption: message.stream,
         parse_mode: "HTML",
-        reply_markup: keyboard.help
+        reply_markup: keyboard.stream
     })
 })
 

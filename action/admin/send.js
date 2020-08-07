@@ -26,12 +26,14 @@ composer.hears(/\/send (.*) : (.*)/,async ctx => {
 })
 
 composer.hears(/\/send/,async ctx => {
-    await ctx.replyWithHTML(
-        `<b>In order to send a message to an applicant, use our template as we showed in our examples below:</b>` + `\n` +
-        `<code>/send &lt;id : message&gt;</code>` + `\n` +
-        `\n` +
-        `<b>Example:</b>` + `\n` +
-        `<code>/send 756870298 : Congrats!</code>`)
+    await ctx.replyWithAnimation({url: `https://media.giphy.com/media/xT77XNlTId0WKcBXnG/source.gif`}, {
+        parse_mode: "HTML",
+        caption: `<b>In order to send a message to an applicant, use our template as we showed in our examples below:</b>` + `\n` +
+            `<code>/send &lt;id : message&gt;</code>` + `\n` +
+            `\n` +
+            `<b>Example:</b>` + `\n` +
+            `<code>/send 756870298 : Congrats!</code>`
+    })
 })
 
 middleware(composer)

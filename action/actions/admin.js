@@ -9,7 +9,7 @@ composer.action(`admins`, async ctx => {
     const admins = Object.keys(database.admins)
 
     await ctx.editMessageMedia({
-        type: 'photo', media: {source: './assets/admins.png'},
+        type: 'animation', media: 'https://media.giphy.com/media/xT77XUw1XMVGIxgove/source.gif',
         caption: message.admin_menu
     }, {
         parse_mode: "HTML",

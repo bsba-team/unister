@@ -142,3 +142,12 @@ exports.links = async (links) => {
     }
     return Markup.inlineKeyboard(keyboard)
 }
+
+exports.stream = Markup.inlineKeyboard([
+    [
+        Markup.urlButton(`Genemator`, `http://twitch.com/genemators`)
+    ],
+    [
+        Markup.urlButton(`iBlogs`, `https://www.youtube.com/channel/UCLvAJjc5gvy_6QL2f-RRBuw`)
+    ]
+])

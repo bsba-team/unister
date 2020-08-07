@@ -141,3 +141,6 @@ exports.error_admin =
 
 exports.links =
     `<b>Here are groups & bots of team BSBA:</b>`
+
+exports.stream =
+    `<b>Here you can get stream pages of our creators. Choose one of creators and press url buttons provided below:</b>`

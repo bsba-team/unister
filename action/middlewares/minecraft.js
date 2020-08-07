@@ -15,8 +15,10 @@ composer.command(`minecraft`, async ctx => {
                 reply_markup: keyboard.minecraft
             })
     } else {
-        await ctx.replyWithHTML(message.minecraft(database), {
-            reply_markup: keyboard.minecraft
+        await ctx.replyWithAnimation({url: `https://media.giphy.com/media/3o6UBedJJfaxXHvZyU/source.gif`}, {
+            reply_markup: keyboard.minecraft,
+            parse_mode: "HTML",
+            caption: message.minecraft(database)
         })
     }
 })

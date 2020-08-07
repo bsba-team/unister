@@ -24,7 +24,7 @@ composer.action(`check`, async ctx => {
         }
     }
 
-    await ctx.editMessageText(await message.check(await github(), await telegram(), uptime), {
+    await ctx.editMessageCaption(await message.check(await github(), await telegram(), uptime), {
         parse_mode: "HTML",
         reply_markup: keyboard.check
     })

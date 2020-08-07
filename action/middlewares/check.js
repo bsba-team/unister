@@ -24,8 +24,10 @@ composer.command(`check`, async ctx => {
         }
     }
 
-    await ctx.replyWithHTML(await message.check(await github(), await telegram(), uptime), {
-        reply_markup: keyboard.check
+    await ctx.replyWithAnimation({url: `https://media.giphy.com/media/3o6UB9xT8upEDGrcqs/source.gif`}, {
+        caption: await message.check(await github(), await telegram(), uptime),
+        reply_markup: keyboard.check,
+        parse_mode: "HTML"
     })
 })
 

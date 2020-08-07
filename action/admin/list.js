@@ -9,10 +9,16 @@ composer.command(`list`, async ctx => {
         const list = database.users["temporary"].toString()
 
         if (list === '') {
-            await ctx.replyWithHTML(`<b>Temporary admin list is empty!</b>`)
+            await ctx.replyWithAnimation({url: `https://media.giphy.com/media/3o6UB117P7KdPnnpNC/source.gif`}, {
+                parse_mode: "HTML",
+                caption: `<b>Temporary admin list is empty!</b>`
+            })
         }
         else {
-            await ctx.replyWithHTML(`<b>Temporary admins:</b>\n<code>${list}</code>`)
+            await ctx.replyWithAnimation({url: `https://media.giphy.com/media/3o6UB117P7KdPnnpNC/source.gif`}, {
+                parse_mode: "HTML",
+                caption: `<b>Temporary admins:</b>\n<code>${list}</code>`
+            })
         }
     })
 })

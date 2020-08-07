@@ -5,7 +5,9 @@ const message = require('../../layouts/messages')
 const keyboard = require('../../layouts/keyboards')
 
 composer.start(async ctx => {
-    await ctx.replyWithHTML(message.start, {
+    await ctx.replyWithAnimation({url: `https://media.giphy.com/media/lnmR8HiZcsHYXi23Jj/source.gif`}, {
+        parse_mode: "HTML",
+        caption: message.start,
         reply_markup: keyboard.start
     })
 })

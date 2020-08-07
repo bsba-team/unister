@@ -24,7 +24,10 @@ composer.hears(/\/join (.+)/ig,async ctx => {
 })
 
 composer.hears(/\/join/,async ctx => {
-    await ctx.replyWithHTML(message.form_guide)
+    await ctx.replyWithAnimation({url: `https://media.giphy.com/media/xT77Y4x27Rq3ZrrteM/source.gif`}, {
+        caption: message.form_guide,
+        parse_mode: "HTML"
+    })
 })
 
 middleware(composer)

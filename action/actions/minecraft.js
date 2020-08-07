@@ -11,12 +11,12 @@ composer.action(`minecraft`, async ctx => {
     const database = await ds(env.MINECRAFT)
 
     if (database === null || database["debug"].ping === false) {
-        await ctx.editMessageText(`<b>Unavailable at the moment! Please, try again later...</b>` + `\n<b>Last Update:</b> ${uptime}`, {
+        await ctx.editMessageCaption(`<b>Unavailable at the moment! Please, try again later...</b>` + `\n<b>Last Update:</b> ${uptime}`, {
             parse_mode: "HTML",
             reply_markup: keyboard.minecraft
         })
     } else {
-        await ctx.editMessageText(message.minecraft(database) + `\n<b>Last Update:</b> ${uptime}`, {
+        await ctx.editMessageCaption(message.minecraft(database) + `\n<b>Last Update:</b> ${uptime}`, {
             parse_mode: "HTML",
             reply_markup: keyboard.minecraft
         })

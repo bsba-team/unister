@@ -12,12 +12,14 @@ composer.hears(/\/add (.+)/ig, async ctx => {
 })
 
 composer.hears(/\/add/,async ctx => {
-        await ctx.replyWithHTML(
-            `<b>In order to add a temporary admin, use our template as we showed in our examples below:</b>` + `\n` +
-            `<code>/add &lt;id&gt;</code>` + `\n` +
-            `\n` +
-            `<b>Example:</b>` + `\n` +
-            `<code>/add 123456789</code>`
+        await ctx.replyWithAnimation({url: `https://media.giphy.com/media/Kc2DXdh0FYgd63XQ14/source.gif`}, {
+            parse_mode: "HTML",
+            caption: `<b>In order to add a temporary admin, use our template as we showed in our examples below:</b>` + `\n` +
+                `<code>/add &lt;id&gt;</code>` + `\n` +
+                `\n` +
+                `<b>Example:</b>` + `\n` +
+                `<code>/add 123456789</code>`
+            }
         )
 })
 

@@ -19,14 +19,17 @@ composer.hears(/\/feedback (.*)/ig, async ctx => {
 })
 
 composer.hears(/\/feedback/, async ctx => {
-    await ctx.replyWithHTML(
-        `<b>You requested feedback command where you can send feedback to admins</b>` + `\n` +
-        `\n` +
-        `<i>In order to send a feedback to us, please use our templates shown below:</i>` + `\n` +
-        `<code>/feedback &lt;your very long text here&gt;</code>` + `\n` +
-        `\n` +
-        `<i>Example:</i>` + `\n` +
-        `<code>/feedback Hello dear admins. BSBA team is the best!</code>`
+    await ctx.replyWithAnimation({url: `https://media.giphy.com/media/l3fQulUUVwxr4Rvt6/source.gif`}, {
+        parse_mode: "HTML",
+        caption: `<b>You requested feedback command where you can send feedback to admins</b>` + `\n` +
+            `\n` +
+            `<i>In order to send a feedback to us, please use our templates shown below:</i>` + `\n` +
+            `<code>/feedback &lt;your very long text here&gt;</code>` + `\n` +
+            `\n` +
+            `<i>Example:</i>` + `\n` +
+            `<code>/feedback Hello dear admins. BSBA team is the best!</code>`
+        }
+
     )
 })
 

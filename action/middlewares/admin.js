@@ -8,7 +8,7 @@ const database = require('../../database/db')
 composer.command(`admins`, async ctx => {
     const admins = Object.keys(database.admins)
 
-    await ctx.replyWithPhoto({source: './assets/admins.png'}, {
+    await ctx.replyWithAnimation({url: 'https://media.giphy.com/media/xT77XUw1XMVGIxgove/source.gif'}, {
         parse_mode: "HTML",
         caption: message.admin_menu,
         reply_markup: await keyboard.admin_list(admins)
