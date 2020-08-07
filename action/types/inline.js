@@ -19,9 +19,6 @@ composer.on('inline_query', async ({ inlineQuery, answerInlineQuery }) => {
             id: indexation,
             url: base + key,
             title: key,
-            thumb_url: thumb,
-            thumb_width: 300,
-            thumb_height: 300,
             description: `${data["description"]}`,
             reply_markup: keyboard.inline(data),
             input_message_content: {
