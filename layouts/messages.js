@@ -129,12 +129,14 @@ exports.inline = (data) =>
     `<b><a href="${data["html_url"]}">GitHub Project Review</a></b>` + `\n` +
     `\n` +
     `<b>Description:</b> ${data["description"]}` + `\n` +
-    `<b>Forks:</b> ${data["forks_count"]}` + `\n` +
-    `<b>Issues:</b> ${data["open_issues_count"]}` + `\n` +
     `<b>Programming Language:</b> ${data["language"]}` + `\n` +
     `<b>Created Date:</b> ${data["created_at"]}` + `\n` +
     `\n` +
-    `<code>👁: ${data["watchers_count"]}</code> <b>|</b> <code>🌟: ${data["stargazers_count"]}</code> <b>|</b> <code>👥: ${data["subscribers_count"]}</code>`
+    `<code>👁: ${data["watchers_count"]}</code> <b>|</b> ` +
+    `<code>🌟: ${data["stargazers_count"]}</code> <b>|</b> ` +
+    `<code>👥: ${data["subscribers_count"]}</code> <b>|</b> ` +
+    `<code>🔃: ${data["forks_count"]}</code> <b>|</b> ` +
+    `<code>❗: ${data["open_issues_count"]}</code> <b>|</b> `
 
 exports.error_admin =
     `<b>You don't have enough power to do that!</b>`
