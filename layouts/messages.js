@@ -22,6 +22,7 @@ exports.help =
     `/minecraft - <code>check server status</code>` + `\n` +
     `/admins - <code>get infos about admins</code>` + `\n` +
     `/links - <code>show bsba url links</code>` + `\n` +
+    `/stream - <code>show media creator's stream links</code>` + `\n` +
     `/join - <code>request to join our organisation</code>` + `\n` +
     `/feedback - <code>leave a feedback to admins</code>` + `\n` +
     `\n` +
