@@ -19,13 +19,13 @@ composer.on('inline_query', async ({ inlineQuery, answerInlineQuery }) => {
             id: indexation,
             url: base + key,
             title: key,
-            thumb_url: thumb,
+            gif_url: `https://media.giphy.com/media/l1BgSCFtPzzJjjO48/source.gif`,
+            thumb_url: `https://media.giphy.com/media/l1BgSCFtPzzJjjO48/source.gif`,
             thumb_width: 300,
             thumb_height: 300,
             description: `${data["description"]}`,
             reply_markup: keyboard.inline(data),
             input_message_content: {
-                media: {url: `https://media.giphy.com/media/3o6UB7BJ9cguaRm0cU/source.gif`},
                 message_text: message.inline(data),
                 parse_mode: 'HTML',
                 disable_web_page_preview: true
