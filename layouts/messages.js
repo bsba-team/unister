@@ -125,6 +125,12 @@ exports.video = (data) =>
     `\n` +
     `<i>${data.message.caption || ` `}</i>`
 
+exports.audio = (data) =>
+    `<b>#audio</b>` + `\n` +
+    `<b>A new audio & music upload by ${data.from.first_name}</b>` + `\n` +
+    `\n` +
+    `<i>${data.message.caption || ` `}</i>`
+
 exports.inline = (data) =>
     `<b><a href="${data["html_url"]}">〰 GitHub Project Review 〰</a></b>` + `\n` +
     `\n` +
