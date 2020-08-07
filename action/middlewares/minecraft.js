@@ -7,15 +7,18 @@ const ds = require('../../database/ds')
 const env = require('../../core/env')
 
 composer.command(`minecraft`, async ctx => {
-    await ctx.replyWithHTML("<b>Please, wait a minute. We are processing your request!</b>")
+    await ctx.replyWithAnimation({url: `https://media.giphy.com/media/3o6UB7BJ9cguaRm0cU/source.gif`}, {
+        parse_mode: "HTML",
+        caption: `<b>Please, wait a minute. We are processing your request!</b>`
+    })
 
     const database = await ds(env.MINECRAFT)
     if (database === null || database["debug"].ping === false) {
-            await ctx.replyWithAnimation({url: `https://media.giphy.com/media/3o6UBedJJfaxXHvZyU/source.gif`}, {
-                caption: `<b>Unavailable at the moment! Please, try again later...</b>`,
-                parse_mode: "HTML",
-                reply_markup: keyboard.minecraft
-            })
+        await ctx.replyWithAnimation({url: `https://media.giphy.com/media/3o6UBedJJfaxXHvZyU/source.gif`}, {
+            caption: `<b>Unavailable at the moment! Please, try again later...</b>`,
+            parse_mode: "HTML",
+            reply_markup: keyboard.minecraft
+        })
     } else {
         await ctx.replyWithAnimation({url: `https://media.giphy.com/media/3o6UBedJJfaxXHvZyU/source.gif`}, {
             reply_markup: keyboard.minecraft,
