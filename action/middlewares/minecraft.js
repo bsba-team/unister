@@ -11,7 +11,9 @@ composer.command(`minecraft`, async ctx => {
 
     const database = await ds(env.MINECRAFT)
     if (database === null || database["debug"].ping === false) {
-            await ctx.replyWithHTML(`<b>Unavailable at the moment! Please, try again later...</b>`, {
+            await ctx.replyWithAnimation({url: `https://media.giphy.com/media/3o6UBedJJfaxXHvZyU/source.gif`}, {
+                caption: `<b>Unavailable at the moment! Please, try again later...</b>`,
+                parse_mode: "HTML",
                 reply_markup: keyboard.minecraft
             })
     } else {
