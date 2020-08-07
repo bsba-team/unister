@@ -15,7 +15,7 @@ composer.on('inline_query', async ({ inlineQuery, answerInlineQuery }) => {
     for (let key of found) {
         let data = await ds(`https://api.github.com/repos/bsba-team/${key}`)
         results.push({
-            type: "article",
+            type: 'gif',
             id: indexation,
             url: base + key,
             title: key,
