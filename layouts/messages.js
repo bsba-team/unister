@@ -136,7 +136,7 @@ exports.inline = (data) =>
     `<code>🌟: ${data["stargazers_count"]}</code> <b>|</b> ` +
     `<code>👥: ${data["subscribers_count"]}</code> <b>|</b> ` +
     `<code>🔃: ${data["forks_count"]}</code> <b>|</b> ` +
-    `<code>❗: ${data["open_issues_count"]}</code> <b>|</b> `
+    `<code>❗: ${data["open_issues_count"]}</code>`
 
 exports.error_admin =
     `<b>You don't have enough power to do that!</b>`
