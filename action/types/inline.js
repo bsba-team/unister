@@ -15,20 +15,19 @@ composer.on('inline_query', async ({ inlineQuery, answerInlineQuery }) => {
     for (let key of found) {
         let data = await ds(`https://api.github.com/repos/bsba-team/${key}`)
         results.push({
-            type: 'gif',
+            type: "article",
             id: indexation,
             url: base + key,
             title: key,
-            gif_url: `https://media.giphy.com/media/l1BgSCFtPzzJjjO48/source.gif`,
-            thumb_url: `https://media.giphy.com/media/l1BgSCFtPzzJjjO48/source.gif`,
+            thumb_url: thumb,
             thumb_width: 300,
             thumb_height: 300,
             description: `${data["description"]}`,
             reply_markup: keyboard.inline(data),
             input_message_content: {
                 message_text: message.inline(data),
-                parse_mode: 'HTML',
-                disable_web_page_preview: true
+                parse_mode: 'HTML'
+                // disable_web_page_preview: true
             }
         })
         indexation++
