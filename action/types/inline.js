@@ -25,6 +25,7 @@ composer.on('inline_query', async ({ inlineQuery, answerInlineQuery }) => {
             description: `${data["description"]}`,
             reply_markup: keyboard.inline(data),
             input_message_content: {
+                media: {url: `https://media.giphy.com/media/3o6UB7BJ9cguaRm0cU/source.gif`},
                 message_text: message.inline(data),
                 parse_mode: 'HTML',
                 disable_web_page_preview: true
