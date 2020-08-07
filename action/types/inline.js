@@ -8,7 +8,7 @@ const keyboard = require('../../layouts/keyboards')
 const ds = require('../../database/ds')
 
 composer.on('inline_query', async ({ inlineQuery, answerInlineQuery }) => {
-    let results = [], indexation = 1, base = `https://github.com/bsba-team/`, thumb = `https://media.giphy.com/media/3o7btUAWeunj1I7gBy/source.gif`
+    let results = [], indexation = 1, base = `https://github.com/bsba-team/`, thumb = `https://github.com/bsba-team/unister/raw/master/assets/repo.png`
     let repos = await Object.values(await ds("https://api.github.com/orgs/bsba-team/repos")).map(function (obj) { return obj["name"]})
     let similarities = await fuzzy.filter(inlineQuery.query, repos).sort().slice(0, 20)
     let found = await similarities.map(function(obj){ return obj.string})
@@ -20,12 +20,14 @@ composer.on('inline_query', async ({ inlineQuery, answerInlineQuery }) => {
             url: base + key,
             title: key,
             thumb_url: thumb,
+            thumb_width: 300,
+            thumb_height: 300,
             description: `${data["description"]}`,
             reply_markup: keyboard.inline(data),
             input_message_content: {
                 message_text: message.inline(data),
-                parse_mode: 'HTML'
-                // disable_web_page_preview: true
+                parse_mode: 'HTML',
+                disable_web_page_preview: true
             }
         })
         indexation++
