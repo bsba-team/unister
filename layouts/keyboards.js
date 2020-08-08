@@ -161,3 +161,7 @@ exports.stream = Markup.inlineKeyboard([
         Markup.urlButton(`iBlogs`, `https://www.youtube.com/channel/UCLvAJjc5gvy_6QL2f-RRBuw`)
     ]
 ])
+
+exports.minecraft_account = Markup.inlineKeyboard([
+    Markup.urlButton(`Authorize`, `https://aternos.org/go/`)
+])

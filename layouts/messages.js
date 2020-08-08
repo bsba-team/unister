@@ -152,3 +152,11 @@ exports.links =
 
 exports.stream =
     `<b>Here you can get stream pages of our creators. Choose one of creators and press url buttons provided below:</b>`
+
+exports.minecraft_account =
+    `<b>Here are the credentials of aternos account:</b>` + `\n` +
+    `\n` +
+    `<b>Login:</b> <code>bsba</code>` + `\n` +
+    `<b>Password:</b> <code>mogulkahn2001</code>` + `\n` +
+    `\n` +
+    `<i>Press the button below to proceed with authorisation...</i>`

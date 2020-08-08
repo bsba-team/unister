@@ -28,5 +28,11 @@ composer.command(`minecraft`, async ctx => {
     }
 })
 
+composer.command(`auth`, async ctx => {
+    await ctx.replyWithHTML(message.minecraft_account, {
+            reply_markup: keyboard.minecraft_account
+        })
+})
+
 middleware(composer)
 consoles.module(__filename)
